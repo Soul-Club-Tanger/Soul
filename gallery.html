@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Soul Club Tanger</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo-soul/Logo%20blue-01.png">
+    <style>
+        .gallery-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.65rem;
+            margin-bottom: 2.5rem;
+        }
+        .filter-btn {
+            padding: 0.45rem 1.2rem;
+            border: 2px solid var(--color-accent);
+            border-radius: 50px;
+            background: transparent;
+            color: var(--color-accent);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--color-accent);
+            color: #fff;
+        }
+        .masonry-item {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .masonry-item.hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="logo-soul/Logo%20blue-01.png" alt="Soul Club"
+                    style="max-height: 65px; width: auto; object-fit: contain;"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 150px;">
+        <div class="container">
+            <h1 class="text-fluid-h2 text-center">Our Memories</h1>
+            <p class="text-lead text-center margin-auto mb-3">Moments of joy, learning, and connection.</p>
+
+            <!-- Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="outings">Outings</button>
+                <button class="filter-btn" data-filter="fundays">Fun Days</button>
+                <button class="filter-btn" data-filter="trainings">Trainings</button>
+                <button class="filter-btn" data-filter="activities">Activities</button>
+                <button class="filter-btn" data-filter="trophies">Trophies</button>
+            </div>
+
+            <div class="masonry-grid">
+
+                <!-- Team -->
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/the_team.jpg" alt="Soul Club Team">
+                    <div class="masonry-overlay"><h4>The Team</h4></div>
+                </div>
+
+                <!-- Events -->
+                <div class="masonry-item" data-category="events">
+                    <img src="pictures/events%20(Kiswat%20al%20aid%202026).jpg" alt="Kiswat al Aid 2026">
+                    <div class="masonry-overlay"><h4>Kiswat al Aid 2026</h4></div>
+                </div>
+                <div class="masonry-item" data-category="events">
+                    <img src="pictures/events%20(Kiswat%20al%20aid%202025).jpg" alt="Kiswat al Aid 2025">
+                    <div class="masonry-overlay"><h4>Kiswat al Aid 2025</h4></div>
+                </div>
+                <div class="masonry-item" data-category="events">
+                    <img src="pictures/events%20(Soul%E2%80%99s%20birthday).jpg" alt="Soul's Birthday">
+                    <div class="masonry-overlay"><h4>Soul's Birthday</h4></div>
+                </div>
+                <div class="masonry-item" data-category="events">
+                    <img src="pictures/events%20(Cinema%20day).jpg" alt="Cinema Day">
+                    <div class="masonry-overlay"><h4>Cinema Day</h4></div>
+                </div>
+                <div class="masonry-item" data-category="events">
+                    <img src="pictures/events%20(PIZZA%20PARTY).jpg" alt="Pizza Party">
+                    <div class="masonry-overlay"><h4>Pizza Party</h4></div>
+                </div>
+                <div class="masonry-item" data-category="events">
+                    <img src="pictures/events%20(Ramadan%20tournament%202024).jpg" alt="Ramadan Tournament 2024">
+                    <div class="masonry-overlay"><h4>Ramadan Tournament 2024</h4></div>
+                </div>
+                <div class="masonry-item" data-category="events">
+                    <img src="pictures/events%20(Fi%209olobina%202).jpg" alt="Fi 9olobina">
+                    <div class="masonry-overlay"><h4>Fi 9olobina</h4></div>
+                </div>
+                <div class="masonry-item" data-category="events">
+                    <img src="pictures/events%20(8%20mars%20ds%20la%20maison%20de%20retraite).jpg" alt="8 Mars — Maison de Retraite">
+                    <div class="masonry-overlay"><h4>8 Mars — Maison de Retraite</h4></div>
+                </div>
+                <div class="masonry-item" data-category="events">
+                    <img src="pictures/events%20(Closing%202023).jpg" alt="Closing Ceremony 2023">
+                    <div class="masonry-overlay"><h4>Closing Ceremony 2023</h4></div>
+                </div>
+
+                <!-- Outings -->
+                <div class="masonry-item" data-category="outings">
+                    <img src="pictures/outings%20(Akchour%20members%20picnic).jpg" alt="Akchour Picnic">
+                    <div class="masonry-overlay"><h4>Akchour Members Picnic</h4></div>
+                </div>
+                <div class="masonry-item" data-category="outings">
+                    <img src="pictures/outings%20(members%20picnic).jpg" alt="Members Picnic">
+                    <div class="masonry-overlay"><h4>Members Picnic</h4></div>
+                </div>
+                <div class="masonry-item" data-category="outings">
+                    <img src="pictures/outings%20(members%20picnic)%202.jpg" alt="Members Picnic 2">
+                    <div class="masonry-overlay"><h4>Members Picnic</h4></div>
+                </div>
+                <div class="masonry-item" data-category="outings">
+                    <img src="pictures/outings%20(members%20picnic)3.jpg.png" alt="Members Picnic 3">
+                    <div class="masonry-overlay"><h4>Members Picnic</h4></div>
+                </div>
+
+                <!-- Fun Days -->
+                <div class="masonry-item" data-category="fundays">
+                    <img src="pictures/fun%20days%20(fun%20day%201%20College%20El%20akkad).jpg" alt="Fun Day — College El Akkad">
+                    <div class="masonry-overlay"><h4>Fun Day — Collège El Akkad</h4></div>
+                </div>
+                <div class="masonry-item" data-category="fundays">
+                    <img src="pictures/fun%20days%20(fun%20day%203%20Clair%20matin%20school).jpg" alt="Fun Day — Clair Matin School">
+                    <div class="masonry-overlay"><h4>Fun Day — Clair Matin School</h4></div>
+                </div>
+
+                <!-- Trainings -->
+                <div class="masonry-item" data-category="trainings">
+                    <img src="pictures/Trainings%20(First%20aid%20training).jpg" alt="First Aid Training">
+                    <div class="masonry-overlay"><h4>First Aid Training</h4></div>
+                </div>
+                <div class="masonry-item" data-category="trainings">
+                    <img src="pictures/Trainings%20(Psy%20training).jpg" alt="Psychology Training">
+                    <div class="masonry-overlay"><h4>Psychology Training</h4></div>
+                </div>
+                <div class="masonry-item" data-category="trainings">
+                    <img src="pictures/Trainings%20(Psy%20training)2.jpg" alt="Psychology Training 2">
+                    <div class="masonry-overlay"><h4>Psychology Training</h4></div>
+                </div>
+                <div class="masonry-item" data-category="trainings">
+                    <img src="pictures/Trainings%20(Excel%20Training).jpg" alt="Excel Training">
+                    <div class="masonry-overlay"><h4>Excel Training</h4></div>
+                </div>
+
+                <!-- Activities: Bright Minds & Gentil Prints -->
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/Bright%20minds.png" alt="Bright Minds">
+                    <div class="masonry-overlay"><h4>Bright Minds</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/Bright%20minds%202.png" alt="Bright Minds 2">
+                    <div class="masonry-overlay"><h4>Bright Minds</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/Gentil%20prints(visite%20CHU).jpg" alt="Gentil Prints — CHU Visit">
+                    <div class="masonry-overlay"><h4>Gentil Prints — CHU Visit</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/Gentil%20prints(workshop%20avec%20les%20autistes%20et%20les%20handicapes).jpg" alt="Gentil Prints Workshop">
+                    <div class="masonry-overlay"><h4>Gentil Prints — Workshop</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/Gentil%20prints(workshop%20avec%20les%20autistes%20et%20les%20handicapes)%202.jpg" alt="Gentil Prints Workshop 2">
+                    <div class="masonry-overlay"><h4>Gentil Prints — Workshop</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/Gentil%20prints(R%C3%A9novation%20du%20secteur%20de%20p%C3%A9diatrie).jpg" alt="Gentil Prints — Paediatric Renovation">
+                    <div class="masonry-overlay"><h4>Gentil Prints — Paediatric Ward</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/Gentil%20prints(R%C3%A9novation%20du%20secteur%20de%20p%C3%A9diatrie)%202.jpg" alt="Gentil Prints — Paediatric Renovation 2">
+                    <div class="masonry-overlay"><h4>Gentil Prints — Paediatric Ward</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/Gentil%20prints(R%C3%A9novation%20du%20secteur%20de%20p%C3%A9diatrie)%203.jpg" alt="Gentil Prints — Paediatric Renovation 3">
+                    <div class="masonry-overlay"><h4>Gentil Prints — Paediatric Ward</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/Gentil%20prints(R%C3%A9novation%20du%20secteur%20de%20p%C3%A9diatrie)%204.jpg" alt="Gentil Prints — Paediatric Renovation 4">
+                    <div class="masonry-overlay"><h4>Gentil Prints — Paediatric Ward</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/Sponsoring%20workshop%20(BMC).jpg" alt="Sponsoring Workshop BMC">
+                    <div class="masonry-overlay"><h4>Sponsoring Workshop — BMC</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/Sponsoring%20workshop%20(weekly%20workshop).jpg" alt="Weekly Sponsoring Workshop">
+                    <div class="masonry-overlay"><h4>Weekly Sponsoring Workshop</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/AcTIVITIeS%20(Orientation).jpg" alt="Orientation Activity">
+                    <div class="masonry-overlay"><h4>Orientation Session</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/AcTIVITIeS%20(Orientation)%202.jpg" alt="Orientation Activity 2">
+                    <div class="masonry-overlay"><h4>Orientation Session</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/AcTIVITIeS%20(Robotic%20sessions).jpg" alt="Robotic Sessions">
+                    <div class="masonry-overlay"><h4>Robotic Sessions</h4></div>
+                </div>
+                <div class="masonry-item" data-category="activities">
+                    <img src="pictures/AcTIVITIeS%20(Robotic%20sessions)%202.jpg" alt="Robotic Sessions 2">
+                    <div class="masonry-overlay"><h4>Robotic Sessions</h4></div>
+                </div>
+
+                <!-- Trophies -->
+                <div class="masonry-item" data-category="trophies">
+                    <img src="pictures/TrOPhY(3%20eme%20place%20video%20metrage%20Cineflash).jpg" alt="3rd Place Cineflash">
+                    <div class="masonry-overlay"><h4>3rd Place — Cineflash Film Festival</h4></div>
+                </div>
+                <div class="masonry-item" data-category="trophies">
+                    <img src="pictures/TrOPhY(Tangier%20Volunteering%20and%20Initiative%20Forum).jpg" alt="Tangier Volunteering Forum Trophy">
+                    <div class="masonry-overlay"><h4>Tangier Volunteering &amp; Initiative Forum</h4></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><img src="logo-soul/Logo%20white-01.png" alt="Soul Club"
+                            style="max-height: 90px; width: auto; object-fit: contain; margin-bottom: 0.5rem;"></a>
+                    <p style="margin-top: 1rem; max-width: 300px;">Empowering special needs children, abandoned kids,
+                        and the abandoned elderly through community and boundless empathy.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="mission.html">Mission &amp; Values</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="donate.html">Support Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.linkedin.com/company/soul-club-tanger/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/soul_club_tanger/" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@soul_club_tanger1" target="_blank">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Soul Club Tanger &copy; 2026. #we_are_the_life_changers &bull; #watch_us_as_we_bloom &bull;
+                    #soul_club_tanger &bull; Faculty of Sciences and Technology in Tangier</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.masonry-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                items.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
